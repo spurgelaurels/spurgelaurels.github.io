@@ -3,8 +3,8 @@
 #  TAG EXTRACTOR
 #  awk '/tags:/,/\---/ { if ($0 !~ /(\---|tags\:)/) { print } }' < * | sort -u
 
-JEKYLLROOT="/home/daphne/src/daphne-reed.io"
-PAGESROOT="/home/daphne/src/spurgelaurels.github.io"
+JEKYLLROOT="/home/daphne/sites/daphne-reed.io"
+PAGESROOT="/home/daphne/sites/spurgelaurels.github.io"
 
 cd $JEKYLLROOT
 bundle exec jekyll build &&

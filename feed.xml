@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.daphne-reed.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://www.daphne-reed.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.daphne-reed.io/" rel="alternate" type="text/html" /><updated>2020-08-29T21:24:10-04:00</updated><id>https://www.daphne-reed.io/</id><title type="html">Spurge Laurels</title><subtitle>Petticoated Swashbuckler</subtitle><entry><title type="html">FreeNAS DNS Blacklisting</title><link href="https://www.daphne-reed.io/FreeNAS-DNS-Blacklisting/" rel="alternate" type="text/html" title="FreeNAS DNS Blacklisting" /><published>2020-08-29T00:00:00-04:00</published><updated>2020-08-29T00:00:00-04:00</updated><id>https://www.daphne-reed.io/FreeNAS-DNS-Blacklisting</id><content type="html" xml:base="https://www.daphne-reed.io/FreeNAS-DNS-Blacklisting/">I didn't really care for the lack of performance from Pi-Hole, nor the lack of stability one can expect from a Raspberry Pi... So I built a FreeBSD Jail on my FreeNAS system to closely mimic the featureset. 
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.daphne-reed.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://www.daphne-reed.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.daphne-reed.io/" rel="alternate" type="text/html" /><updated>2020-08-29T21:26:03-04:00</updated><id>https://www.daphne-reed.io/</id><title type="html">Spurge Laurels</title><subtitle>Petticoated Swashbuckler</subtitle><entry><title type="html">FreeNAS DNS Blacklisting</title><link href="https://www.daphne-reed.io/FreeNAS-DNS-Blacklisting/" rel="alternate" type="text/html" title="FreeNAS DNS Blacklisting" /><published>2020-08-29T00:00:00-04:00</published><updated>2020-08-29T00:00:00-04:00</updated><id>https://www.daphne-reed.io/FreeNAS-DNS-Blacklisting</id><content type="html" xml:base="https://www.daphne-reed.io/FreeNAS-DNS-Blacklisting/">I didn't really care for the lack of performance from Pi-Hole, nor the lack of stability one can expect from a Raspberry Pi... So I built a FreeBSD Jail on my FreeNAS system to closely mimic the featureset.  
 
 
 Once your system is built, and up and running, you can execute the following to update: 
-
-`git pull https://github.com/oznu/dns-zone-blacklist.git /config/blacklist`
-
+`git pull https://github.com/oznu/dns-zone-blacklist.git /config/blacklist`  
 
 
-Build instructions: 
+
+Build instructions:  
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{&quot;pkgs&quot;:[&quot;pkg&quot;,dnsmasq&quot;,&quot;git&quot;,ca_root_nss&quot;]}'&lt;/span&gt; &amp;gt; /tmp/pkg.json
 

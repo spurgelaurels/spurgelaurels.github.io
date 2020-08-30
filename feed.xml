@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.daphne-reed.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://www.daphne-reed.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.daphne-reed.io/" rel="alternate" type="text/html" /><updated>2020-07-06T14:24:09-04:00</updated><id>https://www.daphne-reed.io/</id><title type="html">Spurge Laurels</title><subtitle>Petticoated Swashbuckler</subtitle><entry><title type="html">FreeNAS DNS Blacklisting</title><link href="https://www.daphne-reed.io/FreeNAS-DNS-Blacklisting/" rel="alternate" type="text/html" title="FreeNAS DNS Blacklisting" /><published>2020-01-21T00:00:00-05:00</published><updated>2020-01-21T00:00:00-05:00</updated><id>https://www.daphne-reed.io/FreeNAS-DNS-Blacklisting</id><content type="html" xml:base="https://www.daphne-reed.io/FreeNAS-DNS-Blacklisting/">~~~
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.daphne-reed.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://www.daphne-reed.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.daphne-reed.io/" rel="alternate" type="text/html" /><updated>2020-08-29T20:35:11-04:00</updated><id>https://www.daphne-reed.io/</id><title type="html">Spurge Laurels</title><subtitle>Petticoated Swashbuckler</subtitle><entry><title type="html">FreeNAS DNS Blacklisting</title><link href="https://www.daphne-reed.io/FreeNAS-DNS-Blacklisting/" rel="alternate" type="text/html" title="FreeNAS DNS Blacklisting" /><published>2020-08-29T00:00:00-04:00</published><updated>2020-08-29T00:00:00-04:00</updated><id>https://www.daphne-reed.io/FreeNAS-DNS-Blacklisting</id><content type="html" xml:base="https://www.daphne-reed.io/FreeNAS-DNS-Blacklisting/">I didn't really care for the lack of performance from Pi-Hole, nor the lack of stability one can expect from a Raspberry Pi... So I built a FreeBSD Jail on my FreeNAS system to closely mimic the featureset. 
+
+Once your system is built, and up and running, you can execute the following to update: 
+
+~~~
+git pull https://github.com/oznu/dns-zone-blacklist.git /config/blacklist
+~~~
+
+
+Build instructions: 
+
+~~~
 echo '{&quot;pkgs&quot;:[&quot;pkg&quot;,dnsmasq&quot;,&quot;git&quot;,ca_root_nss&quot;]}' &gt; /tmp/pkg.json
 
 iocage create -n &quot;DNS&quot; -p /tmp/pkg.json -r 11.3-RELEASE ip4_addr=&quot;vnet0|172.20.0.5/23&quot; defaultrouter=&quot;172.20.0.1&quot; vnet=&quot;on&quot; allow_raw_sockets=&quot;1&quot; boot=&quot;on&quot; allow_tun=&quot;1&quot;
@@ -24,5 +35,4 @@ iocage exec DNS vi /usr/local/etc/dnsmasq.conf
 
 iocage exec DNS sysrc &quot;dnsmasq_enable=YES&quot;
 iocage exec DNS service dnsmasq start 
-~~~</content><category term="FreeNAS" /><category term="security" /><category term="networking" /><summary type="html">~~~
-echo '{&quot;pkgs&quot;:[&quot;pkg&quot;,dnsmasq&quot;,&quot;git&quot;,ca_root_nss&quot;]}' &gt; /tmp/pkg.json</summary></entry></feed>
+~~~</content><category term="FreeNAS" /><category term="security" /><category term="networking" /><summary type="html">I didn't really care for the lack of performance from Pi-Hole, nor the lack of stability one can expect from a Raspberry Pi... So I built a FreeBSD Jail on my FreeNAS system to closely mimic the featureset.</summary></entry></feed>

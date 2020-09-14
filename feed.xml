@@ -1,4 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.daphne-reed.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://www.daphne-reed.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.daphne-reed.io/" rel="alternate" type="text/html" /><updated>2020-08-29T21:28:11-04:00</updated><id>https://www.daphne-reed.io/</id><title type="html">Spurge Laurels</title><subtitle>Petticoated Swashbuckler</subtitle><entry><title type="html">FreeNAS DNS Blacklisting</title><link href="https://www.daphne-reed.io/FreeNAS-DNS-Blacklisting/" rel="alternate" type="text/html" title="FreeNAS DNS Blacklisting" /><published>2020-08-29T00:00:00-04:00</published><updated>2020-08-29T00:00:00-04:00</updated><id>https://www.daphne-reed.io/FreeNAS-DNS-Blacklisting</id><content type="html" xml:base="https://www.daphne-reed.io/FreeNAS-DNS-Blacklisting/">I didn't really care for the lack of performance from Pi-Hole, nor the lack of stability one can expect from a Raspberry Pi... So I built a FreeBSD Jail on my FreeNAS system to closely mimic the featureset.  
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.daphne-reed.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://www.daphne-reed.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.daphne-reed.io/" rel="alternate" type="text/html" /><updated>2020-09-14T10:17:56-04:00</updated><id>https://www.daphne-reed.io/</id><title type="html">Spurge Laurels</title><subtitle>Petticoated Swashbuckler</subtitle><entry><title type="html">HiDPI with i3 on an X1 Carbon</title><link href="https://www.daphne-reed.io/HiDPI/" rel="alternate" type="text/html" title="HiDPI with i3 on an X1 Carbon" /><published>2020-09-14T00:00:00-04:00</published><updated>2020-09-14T00:00:00-04:00</updated><id>https://www.daphne-reed.io/HiDPI</id><content type="html" xml:base="https://www.daphne-reed.io/HiDPI/">Three laptops in a row now and I've struggled with HiDPI. I've written scripts, I've abandoned my favourite wm (i3-gaps) for gnome-mate, and I've done so many bloody things that I lost track of what worked and what didn't. 
+
+With my new X1 Carbon (gen7) I had a chance to start fresh, and it turned out that it was this simple...  
+
+Thank you to [dougie.io](https://dougie.io/linux/hidpi-retina-i3wm/) for the post. 
+
+
+`~/.Xresources`
+{% highlight javascript %}  
+Xft.dpi: 192
+URxvt.font: xft:FiraMono-Regular:size=10
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+{% endhighlight %}  
+
+
+`~/.profile`
+{% highlight javascript %}  
+export GDK_SCALE=2
+export GDK_DPI_SCALE=0.5
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+{% endhighlight %}</content><category term="linux" /><category term="notes" /><summary type="html">Three laptops in a row now and I've struggled with HiDPI. I've written scripts, I've abandoned my favourite wm (i3-gaps) for gnome-mate, and I've done so many bloody things that I lost track of what worked and what didn't.</summary></entry><entry><title type="html">Mutt-NG with Fastmail, Yubi key, and more!</title><link href="https://www.daphne-reed.io/Mutt-Fastmail-Yubi/" rel="alternate" type="text/html" title="Mutt-NG with Fastmail, Yubi key, and more!" /><published>2020-09-01T00:00:00-04:00</published><updated>2020-09-01T00:00:00-04:00</updated><id>https://www.daphne-reed.io/Mutt-Fastmail-Yubi</id><content type="html" xml:base="https://www.daphne-reed.io/Mutt-Fastmail-Yubi/"></content><category term="security" /><category term="networking" /></entry><entry><title type="html">FreeNAS DNS Blacklisting</title><link href="https://www.daphne-reed.io/FreeNAS-DNS-Blacklisting/" rel="alternate" type="text/html" title="FreeNAS DNS Blacklisting" /><published>2020-08-29T00:00:00-04:00</published><updated>2020-08-29T00:00:00-04:00</updated><id>https://www.daphne-reed.io/FreeNAS-DNS-Blacklisting</id><content type="html" xml:base="https://www.daphne-reed.io/FreeNAS-DNS-Blacklisting/">I didn't really care for the lack of performance from Pi-Hole, nor the lack of stability one can expect from a Raspberry Pi... So I built a FreeBSD Jail on my FreeNAS system to closely mimic the featureset.  
 
 
 Once your system is built, and up and running, you can execute the following to update:  
